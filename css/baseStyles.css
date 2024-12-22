@@ -1,0 +1,266 @@
+@charset "utf-8";
+
+/*Base style sheet for the website of Brenda Kezar, author
+Author: Brenda Kezar
+Date: March 2024
+filename: baseStyles.css */
+
+/* ================================================
+REMEMBER TO REMOVE THIS
+It is design & troubleshooting code
+It should not appear in the final web design
+===================================================
+*/
+/*
+* {
+  outline: 1px dotted red;
+}
+
+main {
+  outline: 1px dotted blue;
+}
+*/
+/* ==================================================
+THE REAL CODE STARTS HERE
+*/
+
+html {
+  background-color: dimgray;
+}
+
+body {
+  width: 95%;
+  margin: 10px auto;
+  background-color: rgb(188, 197, 192);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 10px;
+  max-width: 960px;
+  min-width: 640px;
+
+  /*This is the specific code for the background image */
+  background-image: url("../images/bg2.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: contain;
+}
+header {
+  margin-top: 50px; /*This is code added to move my header out of *THE* background
+  if the background changes, this can be changed */
+}
+/* this is code to display an image in the header. */
+#mainheaderimage {
+  display: block;
+  width: 95%;
+}
+/*This determines the space each nav item takes up and will need
+to be changed if new nav item links are added */
+body > header > nav.mainNav li {
+  width: 25%;
+  /* background-color: darkred;*/ /*each time you see a commented out color
+  like this, it's because I can't make up my mind what color scheme to use*/
+  background-color: black;
+}
+h1 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  padding: 3px;
+  text-shadow: 2px 2px 4px #b80f0a;
+  font-size: 35px;
+  margin-top: 20px;
+}
+h2 {
+  font-family: "Courier New", Courier, monospace;
+  padding: 3px;
+  font-size: 25px;
+}
+h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/*This is just my generic styling for lists, with 
+a bullet and a little padding. Nav menus and the playlist
+have their own styling later in the sheet */
+ul,
+ol {
+  margin-left: 20px;
+  padding: 5px;
+}
+
+/*This makes the main nav list go horizontal instead of stacking like 
+a normal list */
+nav.mainNav li {
+  display: block;
+  float: left;
+  padding: 5px;
+}
+/* These nav selections make the main navigation list have no list
+images and no underlining for links. Will have to watch for if other 
+Navs are added, as this doesn't specify just the main class*/
+nav > ul {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+  width: 95%;
+}
+
+nav ul li a {
+  color: aliceblue;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+}
+/* These nav selectors style the links based on their status*/
+nav ul li a:visited {
+  color: aliceblue;
+}
+
+nav ul li a:hover {
+  color: chartreuse;
+  font-weight: bolder;
+}
+
+nav ul li a:focus {
+  outline: thin dotted;
+}
+
+nav ul li a:hover,
+nav ul li a:active {
+  outline: 0;
+}
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+aside {
+  clear: left; /*this frees the aside from being overlapped by the nav */
+  /*These next two lines are where I experiment with floating
+  the aside to make two columns, basically. */
+  float: left;
+  width: 20%;
+  /* background-color: rgb(188, 197, 193);*/
+}
+.asidepadding {
+  padding-left: 20px;
+}
+
+#sidebarposts li {
+  list-style: none;
+  list-style-image: none;
+  font-size: medium;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+#sidebarposts li a {
+  color: darkred;
+}
+#postlist {
+  margin-top: 50px;
+  padding-bottom: 20px;
+}
+.sidebardiv {
+  padding-bottom: 20px;
+}
+.sidewidgets {
+  padding-top: 20px;
+  font-size: smaller;
+  margin: auto;
+}
+main {
+  background-color: darkolivegreen;
+  /*background-color: darkred;*/ /*another bit of wishy-washy about colors */
+  padding: 10px;
+  float: left; /*float and width are making the main section a column beside the aside */
+  width: 75%;
+}
+figure {
+  padding-bottom: 40px;
+}
+#tagline {
+  font-size: small;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+#FBButton {
+  display: block;
+  background-color: rgb(24, 119, 242);
+  margin-top: 50px;
+}
+#FBButton a {
+  text-decoration: none;
+  color: white;
+}
+#AmazonButton {
+  display: block;
+  background-color: goldenrod;
+  margin-top: 10px;
+}
+#AmazonButton a {
+  text-decoration: none;
+  color: black;
+}
+article {
+  background-color: darkgray;
+  padding: 5px;
+}
+.mypic {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  max-height: 400px;
+  padding: 10px;
+}
+.underline {
+  text-decoration: underline;
+}
+#HWAlogo {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+/*This makes the playlist have tiny Cthulhus as the bullets */
+#playlist > ul {
+  list-style-image: url(../images/SingleCthulhuXXSmall.png);
+  margin-left: 60px;
+  padding: 5px;
+}
+#corgiquote {
+  margin-top: 30px;
+}
+.generalOL {
+  margin-left: 20px;
+}
+p {
+  margin-bottom: 10px;
+}
+/* This selects the first section and adds padding to the top */
+section:first-of-type {
+  padding-top: 10px;
+}
+section {
+  padding-bottom: 10px;
+}
+.topofpost {
+  height: 300px;
+  margin: 0 auto 20px;
+}
+
+footer {
+  clear: left; /*this is the code for as I'm testing floats to keep footer from being overlapped or overlapping */
+  /*background-color: darkred;*/ /*wishy-washy color stuff again */
+  background-color: black;
+  padding-top: 5px;
+  text-align: center;
+  color: aliceblue;
+  height: 30px;
+  width: 95%;
+}
+a:hover {
+  color: chartreuse;
+  font-weight: bolder;
+}
