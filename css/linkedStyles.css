@@ -1,0 +1,36 @@
+/*Universal Styles*/
+html,
+body {
+  margin: 0px;
+  padding: 0;
+  font-size: 20px;
+  /*overflow-x: hidden;*/
+}
+body {
+  width: 100%;
+  box-sizing: border-box;
+  background-image: url(../images/ParchmentBack.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main {
+  margin: 0 20px 80px 30px;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+.italics {
+  font-style: italic;
+}
+li {
+  padding: 10px;
+  list-style: none;
+}
+footer {
+  text-align: center;
+  font-size: 0.75rem;
+  padding-bottom: 50px;
+}
