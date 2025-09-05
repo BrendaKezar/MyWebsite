@@ -78,6 +78,11 @@ h3 {
   font-size: 20px;
   margin-bottom: 10px;
 }
+h5 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
 
 /*This is just my generic styling for lists, with 
 a bullet and a little padding. Nav menus and the playlist
@@ -213,6 +218,7 @@ article {
   margin-right: auto;
   text-align: center;
   max-height: 400px;
+  max-width: 90%;
   padding: 10px;
 }
 .underline {
@@ -263,4 +269,7 @@ footer {
 a:hover {
   color: chartreuse;
   font-weight: bolder;
+}
+cite {
+  font-style: italic;
 }
